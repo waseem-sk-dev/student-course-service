@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: course-service 
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      fail-fast: true
+      retry: 
+        max-attempts: 5
+        initial-interval: 1000
